@@ -8,6 +8,11 @@ $nama = trim($_POST['nama'] ?? '');
 $username = trim($_POST['username'] ?? '');
 $password = $_POST['password'] ?? '';
 
+$konfirmasi = $_POST['konfirmasi_password'] ?? '';
+if ($password !== $konfirmasi) {
+    $erors[] = "Konfirmasi password tidak cocok.";
+}
+
 $errors = [];
 if ($nama === '') {
     $errors[] = "Nama wajib diisi.";

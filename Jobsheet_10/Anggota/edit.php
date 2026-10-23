@@ -36,6 +36,20 @@ if (!$anggota) {
                     <input type="text" id="nama" name="nama" value="<?php echo $anggota['nama']; ?>" required>
                 </p>
                 <p>
+                    <label>Jenis Kelamin</label>
+                    <span style="display: flex; gap: 1.5rem; margin-top: 0.4rem;">
+                        <label style="display: flex; align-items: center; gap: 0.4rem; font-weight: normal; cursor: pointer;">
+                            <input type="radio" name="jenis_kelamin" value="Laki-laki" style="width: auto; margin: 0;"
+                                <?php echo ($anggota['jenis_kelamin'] ?? '') === 'Laki-laki' ? 'checked' : ''; ?> required> Laki-laki
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.4rem; font-weight: normal; cursor: pointer;">
+                            <input type="radio" name="jenis_kelamin" value="Perempuan" style="width: auto; margin: 0;"
+                                <?php echo ($anggota['jenis_kelamin'] ?? '') === 'Perempuan' ? 'checked' : ''; ?> required> Perempuan
+                        </label>
+                    </span>
+                </p>
+
+                <p>
                     <label for="no_anggota">No. Anggota</label><br>
                     <input type="text" id="no_anggota" name="no_anggota" value="<?php echo $anggota['no_anggota']; ?>" required>
                 </p>

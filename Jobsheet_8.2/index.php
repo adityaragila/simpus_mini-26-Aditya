@@ -29,10 +29,10 @@ $totalAnggota = $pdo->query("SELECT COUNT(*) FROM anggota")->fetchColumn();
 </section>
 
 <!-- Tambahan: kotak pencarian -->
-<section class="search-box">
+<!-- <section class="search-box">
     <label for="search">Cari Buku:</label>
     <input type="text" id="search" name="search" placeholder="Masukkan judul buku...">
-</section>
+</section>/ -->
 
 <!-- Tambahan: contoh flash message -->
 <?php 

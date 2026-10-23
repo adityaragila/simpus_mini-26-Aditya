@@ -12,7 +12,7 @@ $offset = ($page - 1) * $perPage;
 $keyword = trim($_GET['q'] ?? '');
 
 if ($keyword !== '') {
-    $hitung = $pdo->prepare("SELECT COUNT(*) FROM buku WHERE judul ILIKE :kw");
+    $hitung = $pdo->prepare("SELECT COUNT(*) FROM buku WHERE judul ILIKE :kw OR " . "CAST (tahun AS TEXT) ILIKE :kw");
     $hitung->execute(['kw' => '%' . $keyword . '%']);
     $totalRows = $hitung->fetchColumn();
 
@@ -73,7 +73,7 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
                                 <a href="edit.php?id=<?php echo $buku['id']; ?>" class="btn-edit">Edit</a>
                                 <form class="form-hapus" method="post" action="hapus.php">
                                     <input type="hidden" name="id" value="<?php echo $buku['id']; ?>">
-                                    <button type="submit" class="btn-hapus">Hapus</button>
+                                    <button type="submit" class="btn-hapus"  onclick="return confirm('Yakin ingin menghapus data ini?');">Hapus</button>
                                 </form>
                             </td>
                         </tr>

@@ -23,6 +23,18 @@ unset($_SESSION['flash']);
                     <input type="text" id="no_anggota" name="no_anggota" required>
                 </p>
                 <p>
+                    <label>Jenis Kelamin</label>
+                    <span style="display: flex; gap: 1.5rem; margin-top: 0.4rem;">
+                        <label style="display: flex; align-items: center; gap: 0.4rem; font-weight: normal; cursor: pointer;">
+                            <input type="radio" name="jenis_kelamin" value="Laki-laki" style="width: auto; margin: 0;" required> Laki-laki
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.4rem; font-weight: normal; cursor: pointer;">
+                            <input type="radio" name="jenis_kelamin" value="Perempuan" style="width: auto; margin: 0;" required> Perempuan
+                        </label>
+                    </span>
+                </p>
+
+                <p>
                     <label for="alamat">Alamat</label><br>
                     <input type="text" id="alamat" name="alamat">
                 </p>

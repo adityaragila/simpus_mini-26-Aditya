@@ -7,6 +7,7 @@ $nama = trim($_POST['nama'] ?? '');
 $noAnggota = trim($_POST['no_anggota'] ?? '');
 $alamat = trim($_POST['alamat'] ?? '');
 $noHp = trim($_POST['no_hp'] ?? '');
+$jenisKelamin = trim($_POST['jenis_kelamin'] ?? '');
 
 if (!$id) {
     header('Location: list.php');
@@ -28,12 +29,13 @@ if (!empty($errors)) {
 }
 
 $stmt = $pdo->prepare(
-    "UPDATE anggota SET nama = :nama, no_anggota = :no_anggota, alamat = :alamat,
-     no_hp = :no_hp WHERE id = :id"
+    "UPDATE anggota SET nama = :nama, no_anggota = :no_anggota, jenis_kelamin = :jenis_kelamin,
+     alamat = :alamat, no_hp = :no_hp WHERE id = :id"
 );
 $stmt->execute([
     'nama' => $nama,
     'no_anggota' => $noAnggota,
+    'jenis_kelamin' => $jenisKelamin,
     'alamat' => $alamat,
     'no_hp' => $noHp,
     'id' => $id,
