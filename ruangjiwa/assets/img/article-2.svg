@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <defs>
+    <linearGradient id="artGrad2" x1="0" y1="0" x2="400" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#9333EA"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" rx="20" fill="url(#artGrad2)"/>
+  <!-- Battery / Energy Burnout symbol -->
+  <rect x="140" y="80" width="120" height="70" rx="14" stroke="#FDF4FF" stroke-width="6"/>
+  <path d="M266 100V130" stroke="#FDF4FF" stroke-width="6" stroke-linecap="round"/>
+  <!-- Low battery level -->
+  <rect x="150" y="90" width="30" height="50" rx="6" fill="#F43F5E"/>
+  <!-- Sparkles -->
+  <circle cx="90" cy="70" r="15" fill="#FFFFFF" fill-opacity="0.1"/>
+  <circle cx="310" cy="160" r="25" fill="#FFFFFF" fill-opacity="0.1"/>
+  <text x="30" y="215" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="14" fill="#FDF4FF">BURNOUT EMOSIONAL</text>
+  <rect x="305" y="25" width="65" height="26" rx="13" fill="#FFFFFF" fill-opacity="0.2"/>
+  <text x="318" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#FFFFFF">Burnout</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none">
+  <defs>
+    <linearGradient id="heroBg" x1="50" y1="50" x2="550" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0F2FE"/>
+      <stop offset="0.5" stop-color="#F0FDFA"/>
+      <stop offset="1" stop-color="#ECFDF5"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Organic Background Blobs -->
+  <circle cx="300" cy="250" r="210" fill="url(#heroBg)"/>
+  <circle cx="440" cy="140" r="90" fill="#99F6E4" fill-opacity="0.35"/>
+  <circle cx="160" cy="360" r="110" fill="#BAE6FD" fill-opacity="0.4"/>
+
+  <!-- Center Figure: Calm Mind & Lotus / Serenity -->
+  <!-- Sitting Meditative Figure -->
+  <ellipse cx="300" cy="380" rx="140" ry="24" fill="#0D9488" fill-opacity="0.12"/>
+  <path d="M220 370C220 330 250 310 300 310C350 310 380 330 380 370H220Z" fill="#0F766E"/>
+  <circle cx="300" cy="245" r="42" fill="#FED7AA"/>
+  <!-- Hair & Serene Expression -->
+  <path d="M265 240C265 205 280 195 300 195C320 195 335 205 335 240C335 230 328 215 300 215C272 215 265 230 265 240Z" fill="#1E293B"/>
+  <path d="M285 246C289 250 293 250 297 246" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+  <path d="M303 246C307 250 311 250 315 246" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+  <path d="M294 260C298 263 302 263 306 260" stroke="#E11D48" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Halo / Aura Lines of Calm -->
+  <circle cx="300" cy="245" r="64" stroke="#0D9488" stroke-dasharray="6 6" stroke-width="2.5" opacity="0.6"/>
+  <circle cx="300" cy="245" r="88" stroke="#38BDF8" stroke-dasharray="8 8" stroke-width="2" opacity="0.4"/>
+
+  <!-- Floating Card 1: Live Psychologist Active -->
+  <g filter="url(#cardShadow)">
+    <rect x="40" y="110" width="220" height="74" rx="18" fill="#FFFFFF"/>
+    <circle cx="76" cy="147" r="22" fill="#CCFBF1"/>
+    <path d="M64 162C64 150 70 144 76 144C82 144 88 150 88 162" fill="#0D9488"/>
+    <circle cx="76" cy="138" r="8" fill="#FBCFE8"/>
+    <circle cx="92" cy="132" r="5" fill="#22C55E"/>
+    <text x="108" y="140" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13" fill="#0F172A">48+ Psikolog</text>
+    <text x="108" y="157" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="11" fill="#10B981">● Siap Konsultasi</text>
+  </g>
+
+  <!-- Floating Card 2: Skrining Skor Sehat -->
+  <g filter="url(#cardShadow)">
+    <rect x="340" y="290" width="220" height="84" rx="18" fill="#FFFFFF"/>
+    <rect x="356" y="306" width="38" height="38" rx="10" fill="#E0F2FE"/>
+    <path d="M375 315V335M365 325H385" stroke="#0284C7" stroke-width="3" stroke-linecap="round"/>
+    <text x="404" y="324" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13" fill="#0F172A">Skrining Dini</text>
+    <text x="404" y="340" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="11" fill="#64748B">Standar Medis PHQ-9</text>
+    <rect x="356" y="356" width="188" height="6" rx="3" fill="#F1F5F9"/>
+    <rect x="356" y="356" width="135" height="6" rx="3" fill="#0D9488"/>
+  </g>
+
+  <!-- Floating Card 3: Hotline Krisis 24 Jam -->
+  <g filter="url(#cardShadow)">
+    <rect x="70" y="390" width="195" height="64" rx="16" fill="#FEF2F2" stroke="#FECACA"/>
+    <circle cx="98" cy="422" r="14" fill="#EF4444"/>
+    <path d="M93 420C95 425 99 427 103 424" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    <text x="120" y="416" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" fill="#991B1B">Krisis Mental 24/7</text>
+    <text x="120" y="432" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#DC2626">Call 119 Ext. 8</text>
+  </g>
+</svg>
