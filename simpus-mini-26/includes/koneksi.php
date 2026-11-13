@@ -1,15 +1,20 @@
 <?php
-$host = 'aws-0-ap-northeast-1.pooler.supabase.com';
-$port = '5432';
-$db   = 'postgres';
-$user = 'postgres.sbvuvjjbozukvhlaktwk';
-$pass = '@cj2PPKZq!PSBCk';
+$host = getenv('DB_HOST') ?: 'aws-0-ap-northeast-1.pooler.supabase.com';
+$port = getenv('DB_PORT') ?: '5432';
+$db   = getenv('DB_NAME') ?: 'postgres';
+$user = getenv('DB_USER') ?: '';
+$pass = getenv('DB_PASS') ?: '';
+
+$pdo = null;
+$db_error = null;
 
 try {
-    $dsn = "pgsql:host=$host;port=$port;dbname=$db;sslmode=require";
-    $pdo = new PDO($dsn, $user, $pass, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-    echo "<h2 style='color: green;'>Koneksi ke Supabase BERHASIL! </h2>";
-} catch (\PDOException $e) {
-    echo "<h2 style='color: red;'>Koneksi Gagal:</h2>";
-    echo "<pre>" . $e->getMessage() . "</pre>";
+    $dsn = "pgsql:host=$host;port=$port;dbname=$db;sslmode=require;connect_timeout=3";
+    $pdo = new PDO($dsn, $user, $pass, [
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    ]);
+} catch (PDOException $e) {
+    $db_error = $e->getMessage();
+    error_log('DB connect failed: ' . $db_error);
 }

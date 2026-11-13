@@ -3,7 +3,7 @@
 // Di lingkungan produksi/hosting, isi nilai-nilai ini lewat environment
 // variable (getenv) yang diatur di server, JANGAN di-commit ke repository
 // bila nilai default di bawah sudah diganti dengan kredensial asli.
-return [
+return 
  return [
     'db_host' => 'aws-0-ap-northeast-1.pooler.supabase.com',
     'db_port' => '5432',
