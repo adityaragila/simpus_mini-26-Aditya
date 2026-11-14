@@ -5,9 +5,6 @@ $db = getenv('DB_NAME') ?: 'postgres';
 $user = getenv('DB_USER') ?: 'postgres.sbvuvjbozukvhlaktwk';
 $pass = getenv('DB_PASS') ?: 'JMnE@cj2PPKZq!PSBCK';
 
-$pdo = null;
-$db_error = null;
-
 try {
     $dsn = "pgsql:host=$host;port=$port;dbname=$db;sslmode=require";
     $pdo = new PDO($dsn, $user, $pass, [
@@ -15,6 +12,6 @@ try {
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     ]);
 } catch (PDOException $e) {
-    $db_error = $e->getMessage();
-    error_log('DB connect failed: ' . $db_error);
+    // Paksa tampilkan error asli di web supaya ketahuan akar masalahnya
+    die("<h3 style='color:red;'>GAGAL KONEKSI SUPABASE:</h3> " . $e->getMessage());
 }
