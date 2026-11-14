@@ -1,13 +1,9 @@
 <?php
-// Pemisahan kredensial dari kode sumber (includes/koneksi.php).
-// Di lingkungan produksi/hosting, isi nilai-nilai ini lewat environment
-// variable (getenv) yang diatur di server, JANGAN di-commit ke repository
-// bila nilai default di bawah sudah diganti dengan kredensial asli.
-return 
- return [
-    'db_host' => 'aws-0-ap-northeast-1.pooler.supabase.com',
-    'db_port' => '5432',
-    'db_name' => 'postgres',
-    'db_user' => 'postgres.sbvuvjjbozukvhlaktwk',
-    'db_pass' => 'JMnE@cj2PPKZq!PSBCk',
+return [
+    'db_host' => getenv('DB_HOST') ?: 'aws-0-ap-northeast-1.pooler.supabase.com',
+    'db_port' => getenv('DB_PORT') ?: '5432',
+    'db_name' => getenv('DB_NAME') ?: 'postgres',
+    'db_user' => getenv('DB_USER') ?: 'postgres.sbvuvjbozukvhlaktwk',
+    'db_pass' => getenv('DB_PASS') ?: 'JMnE@cj2PPKZq!PSBCK',
+    'db_sslmode' => getenv('DB_SSLMODE') ?: 'require',
 ];
